@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: rgba(255, 255, 255, 1);
+  --foreground: rgba(31, 17, 15, 1);
+  --card: rgba(255, 255, 255, 1);
+  --card-foreground: rgba(31, 17, 15, 1);
+  --primary: rgba(31, 17, 15, 1);
+  --primary-foreground: rgba(245, 245, 255, 1);
+  --muted: rgba(240, 245, 248, 1);
+  --muted-foreground: rgba(103, 110, 122, 1);
+  --destructive: rgba(255, 45, 45, 1);
+  --destructive-foreground: rgba(245, 245, 255, 1);
+  --border: rgba(230, 234, 239, 1);
+  --info: rgb(77, 131, 238);
+  --info-foreground: rgba(245, 245, 255, 1);
+  --success: rgb(0, 200, 83);
+  --success-foreground: rgba(245, 245, 255, 1);
+}
+
+.green {
+  background-color: var(--success) !important;
+  color: var(--success-foreground) !important;
+}
+.red {
+  background-color: var(--destructive) !important;
+  color: var(--destructive-foreground) !important;
+}
+.blue {
+  background-color: var(--info) !important;
+  color: var(--info-foreground) !important;
+}
+.gray {
+  background-color: var(--muted-foreground) !important;
+  color: var(--muted) !important;
+}
+
+.not-found {
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--muted-foreground);
+  margin: 2rem auto;
+}
+
+h1 {
+  font-size: 1.4rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background);
+}
+
+main {
+  width: 100%;
+  max-width: 70rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+header {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+main section {
+  width: 100%;
+}
+
+#bookFormSection h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#bookForm {
+  width: 100%;
+  max-width: 35rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px;
+  background-color: var(--background);
+}
+
+#bookSearchSection {
+  width: 100%;
+  max-width: 35rem;
+}
+#searchBook {
+  display: flex;
+  margin: 1rem auto;
+  gap: 0.6rem;
+}
+
+input[type='text'],
+[type='number'] {
+  width: 100% !important;
+  padding: 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  outline-color: var(--muted-foreground);
+}
+
+.input-container {
+  width: 100%;
+  display: flex;
+  gap: 0.2rem;
+  flex-direction: column;
+  align-items: start;
+}
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 1rem;
+  margin: 0.6rem auto;
+}
+
+article {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 0.1px solid var(--border);
+  transition: all 0.5s;
+  background-color: var(--card);
+  color: var(--card-foreground);
+}
+
+article:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+
+article p {
+  margin: 0.3rem auto;
+  font-size: small;
+}
+
+article h3 {
+  text-transform: capitalize;
+  font-size: medium;
+}
+
+.action {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  padding-top: 0.4rem;
+}
+
+button {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: block;
+  background-size: 400%;
+}
+
+button:hover {
+  transform: scale(0.95);
+}
+
+@media screen and (min-width: 640px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .not-found {
+    font-size: 1.7rem;
+  }
+  button {
+    min-height: 2.2rem;
+  }
+  article p {
+    font-size: medium;
+  }
+
+  article h3 {
+    font-size: large;
+  }
+}
